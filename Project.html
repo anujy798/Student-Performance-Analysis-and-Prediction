@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<style>
+  body{
+background: url('84248.png') no-repeat center center fixed ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+select{
+  max-width: 90%;
+  min-width: 90%;
+}
+
+#card-main{
+  width: 700px;
+}
+
+label{
+  margin-top: 5px;
+}
+
+.mt-10{
+  margin-top: 100px;
+
+}
+.col-sm-3{
+  padding-top: 5px;
+}
+
+#head{
+ color:#ffffff;
+ font-size: 250%;
+}
+
+#desc{
+color: #ffffff;
+padding-top: 50px;
+font-size: 150%;
+
+}
+
+input{
+  height: 50%;
+}
+
+.col-lg-7{
+ padding-left: 50px;
+ opacity: 0.9;
+
+}
+
+
+</style>
+
+ </head> 
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="container mt-10" id = "sub">
+     <p id = "head">Student Performance Prediction</p> 
+
+     <p id = "desc">
+      Welcome to Student Performance Predictor! This Predictor will take values and will try to predict your performance according to various attributes.
+
+
+  </div>
+    </div>
+
+
+    <div class="col-lg-7">
+  <div class="card mt-4 mb-2" id = "card-main">
+  <h5 class="card-header">Please fill details!</h5>
+  <div class="card-body">
+     <div id ="ui">
+      <form class="form-group" action="#" method="post">
+
+        <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Student Id"> <strong>Student Id </strong> </label>
+              <input type="text" name="stu_id" class="form-control" placeholder="Student Id" required="required"> 
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Gender"> <strong>Sex</strong> </label>
+            <br>
+              <select name = "sex">
+                <option value = 1> Male</options>
+                <option value = 2> Female</option>
+              </select>
+
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Age"> <strong>Age</strong> </label>
+              <input type="text" name="age" class="form-control" placeholder="Age" required="required">
+            </div>  
+
+            <div class="col-sm-3">
+            <label title = "Enter your Address type"> <strong>Address Type</strong> </label><br>
+              <select name = "address">
+                <option value = 1> Urban</option>
+                <option value = 2> Rural</option>
+                
+              </select>
+            </div>  
+           </div> 
+
+           <!-- Second row-->
+            <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Enter your family size"> <strong>Family Size</strong> </label><br>
+            <select name ="famsize">
+              <option value=1> Less Than 3 members</option>
+              <option value=2> Greater Than 3 members</option>
+             </select>
+             
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Your Mother Education "> <strong>Mother's Education</strong> </label> <br>
+              <select name ="medu">
+              <option value=0> Uneducated </option>
+              <option value=1> Upto Primary </option>
+              <option value = 2> Upto 9th Grade</option>
+              <option value = 3>  Secondary Education</option>
+              <option value = 4> Higher Education </option>
+
+             </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Your father Education"> <strong>Father's Education</strong> </label>
+               <select name ="fedu">
+              <option value=0> Uneducated </option>
+              <option value=1> Upto Primary </option>
+              <option value = 2> Upto 9th Grade</option>
+              <option value = 3>  Secondary Education</option>
+              <option value = 4> Higher Education </option>
+
+             </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Parenets Cohibition Status"> <strong>Parent's Status</strong> </label>
+            <select name = "pstatus">
+              <option value = 1> Living Together</option>
+              <option value= 2> Living Apart</option>
+            </select>
+            </div>  
+           </div> 
+
+
+           <!-- Third row-->
+
+            <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Your Mother's Job"> <strong>Mother's Job </strong> </label>
+             <select name = "mjob">
+             <option value = 1> Teacher</option>
+             <option value = 2> Health Care Related</option>
+             <option value = 3> Civil Services</option>
+             <option value = 4> Home</option>
+             <option value = 5> Others</option> 
+
+             </select>
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Your Father's Job"> <strong>Father's Job</strong> </label>
+             <select name = "fjob">
+             <option value = 1> Teacher</option>
+             <option value = 2> Health Care Related</option>
+             <option value = 3> Civil Services</option>
+             <option value = 4> Home</option>
+             <option value = 5> Others</option> 
+
+             </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Reason for chosing this school"> <strong>Reason </strong> </label>
+            <select name = "reason"> 
+              <option value =  1> Close to home</option>
+              <option value = 2> School Reputation</option>
+              <option value = 3> Course Preference</option>
+              <option value = 4> Other reason</option>
+
+            </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Your Guardian details"> <strong>Guardian</strong> </label>
+              <select name = "guardian">
+                <option value = 1> Mother</option>
+                <option value = 2> father</option>
+                <option value = 3> Other</option>
+              </select>
+            </div>  
+           </div> 
+
+           <!-- 4th row-->
+            <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Estimated Travel time"> <strong>Travel time</strong> </label>
+             <select name = "traveltime">
+               <option value= 1> Less than 15 min</option>
+               <option value = 2> 15-30 mins </option>
+               <option value = 3> 30-60 mins</option>
+               <option value = 4> >60 mins</option>
+             </select>
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Estimated Study time"> <strong>Study Time</strong> </label>
+              
+              <select name = "studytime">
+               <option value = 1>< 2 hours</option>
+               <option value = 2>  2 to 5 hours</option>
+               <option value= 3> 5 to 10 hours</option>
+               <option value= 4> >10hours</option>
+
+
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Failures"> <strong>Failure till Now</strong> </label>
+              <input type="text" name="failures" class="form-control" placeholder="Failures till now" required="required">
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Extra educational Support"> <strong>Extra Edu Support</strong> </label>
+              <select name = "edusupport">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>  
+           </div> 
+
+           <!-- 5th row   -->
+
+            <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Parent's Support"> <strong>Parent's Support </strong> </label>
+              <select name = "parentsupport">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Paid classes taken"> <strong>Paid Classes</strong> </label>
+              <select name = "paid">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Extra CoCurricular Activities"> <strong>Extra Activities</strong> </label>
+             <select name = "extra">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Nursery Attended"> <strong>Nursery Attended</strong> </label>
+              <select name = "nursery">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>  
+           </div> 
+
+           <!-- 6th row-->
+
+           <div class="row"> 
+          <div class="col-sm-3">
+            <label title = "Willing to higher Studies"> <strong>Higher Studies</strong> </label>
+               <select name = "higher">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Do you have Internet Connection"> <strong>Internet</strong> </label>
+              <select name = "internet">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Romantic Relationship"> <strong>Romantic </strong> </label>
+              <select name = "romantic">
+                <option value = 1> Yes</option>
+                <option value= 2> No</option>
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title="Family Relationship"> <strong>Family Relation</strong> </label>
+              <select name = "famrel">
+                <option value = 1> Very bad</option>
+                  <option value = 2> bad</option>
+                    <option value = 3> Good</option>
+                      <option value = 4> Very Good</option>
+                        <option value = 5> Excellent</option>
+              </select>
+            </div>  
+           </div> 
+
+
+           <!-- 7th row-->
+
+            <div class="row"> 
+          <div class="col-sm-3">
+            <label> <strong>Free Time left </strong> </label>
+               <select name = "famrel">
+                <option value = 1> Very less</option>
+                  <option value = 2> less</option>
+                  <option value= 3>Fair</option>
+                    <option value = 4> High</option>
+                      <option value = 5> Very High</option>
+              </select>
+            </div>
+
+             <div class="col-sm-3">
+            <label title = "Alcohol Consumption"> <strong>Alcohol Consume</strong> </label>
+               <select name = "famrel">
+                <option value = 1> Very low</option>
+                  <option value = 2> low</option>
+                    <option value = 3> High</option>
+                      <option value = 4> Very High</option>
+                        <option value = 5> Severe</option>
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Health Status"> <strong>Health Status</strong> </label>
+              <select name = "famrel">
+                <option value = 1> Very bad</option>
+                  <option value = 2> bad</option>
+                    <option value = 3> Good</option>
+                      <option value = 4> Very Good</option>
+                        <option value = 5> Excellent</option>
+              </select>
+            </div>  
+            <div class="col-sm-3">
+            <label title = "Health Status" > <strong>No. of Absences</strong> </label>
+              <input type="text" name="absences" class="form-control" placeholder="absences" required="required">
+            </div>  
+           </div> 
+           <div class="border border-light mb-1 mt-3">
+
+    <div class="button_cont" align="center"><a class="button_css" href="#" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Performance</strong></button></a>
+        </div>
+
+  </div>
+
+      </form> 
+    </div>
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>                                       
+        
+</body>
+</html>
