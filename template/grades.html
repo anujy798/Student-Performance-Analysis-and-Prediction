@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+.container{
+
+margin-top: 15%;
+margin-left: 20%;
+
+}
+</style>	
+
+
+</head>
+
+
+<body>
+
+
+{% if grades == 1 %}
+<div class = "container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Excellent</h1>
+    <p class="lead"> Expected Score can be greater than 16.</p>
+  </div>
+</div>
+</div>
+
+{% endif %}
+
+
+
+{% if grades == 2 %}
+<div class = "container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Good </h1>
+    <p class="lead"> Expected Score can be in between 14 and 15</p>
+  </div>
+</div>
+</div>
+{% endif %}
+
+
+{% if grades == 3 %}
+<div class = "container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Satisfactory</h1>
+    <p class="lead">Expected Score can be in between 12 and 13</p>
+  </div>
+</div>
+</div>
+{% endif %}
+
+
+{% if grades == 4 %}
+<div class = "container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Sufficient</h1>
+    <p class="lead">Expected Score can be in between 10 and 11.</p>
+  </div>
+</div></div>
+
+{% endif %}
+
+
+{% if grades == 5 %}
+<div class = "container">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fail</h1>
+    <p class="lead">The student is expected to score below 10</p>
+  </div>
+</div>
+</div>
+{% endif %}
+
+</body>
+</html>
